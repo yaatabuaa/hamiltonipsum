@@ -34,12 +34,16 @@
                 <label for="swearing">Start with "I am not giving up my shot"</label>
                 <br>
                 <input type="checkbox" id="swearing" name="swearing" value="swearing">
-                <label for="swearing">Add curse words</label>
+                <label for="swearing">Add swearing</label>
+                <br>
+                <!-- Set button type to button so it doesn't refresh the results -->
+                <button onclick="scramble()" type="button">Generate Text</button>
             </form>
         </section>
-
         <!-- My content and lyrics will show up here -->
-        <section id="generated-text"></section>
+        <section class="lorem-ipsum-text" id="generated-text">
+            <!-- Find a way to nicely display the text that is generated. Text area looked bad -->
+        </section>
     </main>
     <footer>
         <p>Made with love by Yaa Otchere</p>
