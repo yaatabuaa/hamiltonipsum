@@ -11,5 +11,8 @@ var ipsum = [
     `Just you wait`,
 ];
 
-console.log(ipsum);
+function scramble() {
+    console.log(ipsum[3]);
+}
 
+scramble();
