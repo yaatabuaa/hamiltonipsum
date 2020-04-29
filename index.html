@@ -20,26 +20,34 @@
         <!-- Settings for text, how many paragraphs and text length -->
         <section class="ipsum-settings">
             <form action="">
-                <label for="paragraphs">Paragraphs</label>
                 <input type="text" id="paragraphs">
+                <label for="paragraphs">Paragraphs</label>
                 <br>
-                <input type="radio" id="short" name="length" value="short">
+                <input type="radio" id="short" name="length" value="short" checked>
                 <label for="short">Short</label>
                 <input type="radio" id="medium" name="length" value="medium">
                 <label for="medium">Medium</label>
                 <input type="radio" id="long" name="length" value="long">
                 <label for="short">Long</label>
                 <br>
+                <input type="checkbox" id="my-shot" name="start" value="start">
+                <label for="my-shot">Start with "I am not giving up my shot"</label>
+                <br>
                 <input type="checkbox" id="swearing" name="swearing" value="swearing">
-                <label for="swearing">Add curse words</label>
+                <label for="swearing">Add swearing</label>
+                <br>
+                <!-- Set button type to button so it doesn't refresh the results -->
+                <button onclick="loremIpsum()" type="button">Generate Text</button>
             </form>
         </section>
-
         <!-- My content and lyrics will show up here -->
-        <section id="generated-text"></section>
+        <section class="lorem-ipsum-text" id="generated-text">
+            <!-- Find a way to nicely display the text that is generated. Text area looked bad -->
+        </section>
     </main>
     <footer>
         <p>Made with love by Yaa Otchere</p>
+        <a href="https://github.com/yaatabuaa/hamiltonipsum">See this on GitHub</a>
         <p class="legal-notice">This is a fan site, please don't sue me!</p>
     </footer>
     <script src="scripts.js" type="text/javascript"></script>
