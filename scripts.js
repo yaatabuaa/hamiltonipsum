@@ -1,4 +1,4 @@
-var myShotPrefix = `I am not giving up my shot! `;
+var myShotPrefix = `I am not throwing away my shot! `;
 
 var swearing = [
     `Bastard.`,
@@ -20,6 +20,18 @@ var ipsum = [
     `Just you wait!`,
 ];
 
-function scramble() {
-    console.log(`${ipsum[3]}`);
+document.getElementById('paragraphs').defaultValue = 3;
+
+var paragraphs = document.getElementById('paragraphs');
+
+paragraphs.addEventListener('change', updateParagraphs);
+
+function updateParagraphs() {
+    //if they enter 0, change it to 1
+    console.log(paragraphs.value);
 }
+
+function loremIpsum() {
+    document.getElementById('generated-text').innerHTML = `${ipsum}`;
+}
+// numberOfParagraphs();

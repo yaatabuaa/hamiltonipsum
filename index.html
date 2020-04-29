@@ -20,7 +20,7 @@
         <!-- Settings for text, how many paragraphs and text length -->
         <section class="ipsum-settings">
             <form action="">
-                <input type="text" id="paragraphs" value="3">
+                <input type="text" id="paragraphs">
                 <label for="paragraphs">Paragraphs</label>
                 <br>
                 <input type="radio" id="short" name="length" value="short" checked>
@@ -30,14 +30,14 @@
                 <input type="radio" id="long" name="length" value="long">
                 <label for="short">Long</label>
                 <br>
-                <input type="checkbox" id="start" name="start" value="start">
-                <label for="swearing">Start with "I am not giving up my shot"</label>
+                <input type="checkbox" id="my-shot" name="start" value="start">
+                <label for="my-shot">Start with "I am not giving up my shot"</label>
                 <br>
                 <input type="checkbox" id="swearing" name="swearing" value="swearing">
                 <label for="swearing">Add swearing</label>
                 <br>
                 <!-- Set button type to button so it doesn't refresh the results -->
-                <button onclick="scramble()" type="button">Generate Text</button>
+                <button onclick="loremIpsum()" type="button">Generate Text</button>
             </form>
         </section>
         <!-- My content and lyrics will show up here -->
