@@ -55,25 +55,29 @@ document.getElementById('paragraphs').defaultValue = 3;
 
 var paragraphs = document.getElementById('paragraphs');
 
-paragraphs.addEventListener('change', updateParagraphNumber);
+paragraphs.addEventListener('keyup', updateParagraphNumber);
 
 function updateParagraphNumber() {
     // will need a for loop i think, for number of paragraphs generate p tags
     console.log(`${paragraphs.value}`);
+    if (paragraphs.value == 0) {
+        //change it to 1
+    }
 }
 
 //appending the array to I am not throwing away my shot
-// document.getElementById("my-shot").defaultValue = false;
-
 // function generateMyShotPrefix() {
 //     var myShotCheckbox = document.getElementById("my-shot");
 //     if (myShotCheckbox.checked == true) {
-//         ipsum.unshift(`${myShotPrefix}`);
+//         // ipsum.unshift(`${myShotPrefix}`);
+//         console.log(`I am not throwing away my shot`);
+//     } else {
+//         console.log(`I am unchecked`);
 //     }
 // }
 
 function loremIpsum() {
-    document.getElementById('generated-text').innerHTML = `<h1>Hamilton the Musical Words here baby!</h1>`;
+    document.getElementById('generated-text').innerHTML = `${ipsum}`;
 }
 
-// generateMyShotPrefix();
+generateMyShotPrefix();
