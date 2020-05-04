@@ -58,11 +58,10 @@ var paragraphs = document.getElementById('paragraphs');
 paragraphs.addEventListener('keyup', updateParagraphNumber);
 
 function updateParagraphNumber() {
-    // will need a for loop i think, for number of paragraphs generate p tags
-    console.log(`${paragraphs.value}`);
-    if (paragraphs.value == 0) {
-        //change it to 1
-    }
+    //get number from the input value
+    var numberOfParagraphs = parseInt(`${paragraphs.value}`);    
+
+    //will need a for loop to generate parapgraphs
 }
 
 //appending the array to I am not throwing away my shot
@@ -77,7 +76,7 @@ function updateParagraphNumber() {
 // }
 
 function loremIpsum() {
-    document.getElementById('generated-text').innerHTML = `${ipsum}`;
+    document.getElementById('generated-text').innerHTML = `<h2>Hammy Love</h2>`;
 }
 
-generateMyShotPrefix();
+// generateMyShotPrefix();
