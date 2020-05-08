@@ -60,6 +60,7 @@ paragraphs.addEventListener('keyup', updateParagraphNumber);
 function updateParagraphNumber() {
     //get number from the input value
     var numberOfParagraphs = parseInt(`${paragraphs.value}`);    
+    console.log(numberOfParagraphs);
 
     //will need a for loop to generate parapgraphs
 }
