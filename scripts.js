@@ -1,3 +1,38 @@
+//set the default value on #paragraphs to 3
+document.getElementById('paragraphs').defaultValue = 3;
+
+const paragraphs = document.getElementById('paragraphs');
+
+paragraphs.addEventListener('keyup', updateParagraphNumber);
+
+function updateParagraphNumber() {
+    //get number from the input value
+    const numberOfParagraphs = parseInt(`${paragraphs.value}`);  
+
+    var i = 0;
+    while (i = numberOfParagraphs) {
+        console.log(`${i} is the number of paragraphs`);
+        break;
+    }
+}
+
+//appending the array to I am not throwing away my shot
+// function generateMyShotPrefix() {
+//     var myShotCheckbox = document.getElementById("my-shot");
+//     if (myShotCheckbox.checked == true) {
+//         // ipsum.unshift(`${myShotPrefix}`);
+//         console.log(`I am not throwing away my shot`);
+//     } else {
+//         console.log(`I am unchecked`);
+//     }
+// }
+
+function loremIpsum() {
+    document.getElementById('generated-text').innerHTML = `<h2>Hammy Love</h2>`;
+}
+
+// generateMyShotPrefix();
+
 var myShotPrefix = `I am not throwing away my shot! `;
 
 var swearing = [
@@ -9,6 +44,8 @@ var swearing = [
 
 var ipsum = [
     //My Shot
+    `I am not throwing away my shot`,
+    `I am not throwing away my shot`,
     `Hey yo, I'm just like my country`,
     `I'm young, scrappy, and hungry`,
     `And I'm not throwing away my shot`,
@@ -48,36 +85,37 @@ var ipsum = [
     `I'm young, scrappy, and hungry`,
     `And I'm not throwing away my shot`,
     `It's time to take a shot!`,
+
+    //Aaron Burr, Sir
+    `Pardon me, are you Aaron Burr, sir?`,
+    `That depends, who's asking?`,
+    `Oh well sure, sir`, 
+    `I'm Alexander Hamilton`,
+    `I'm at your service, sir`,
+    `I have been looking for you`,
+    `I'm getting nervous`,
+    `Sir, I heard your name at Princeton`,
+    `I was seeking an accelerated course of study`,
+    `When I got sort out of sorts with a buddy of yours`,
+    `I may have punched him`,
+    `It’s a blur, sir`,
+    `He handles the financials—`,
+    `You punched the bursar?`,
+    `Yes, I wanted to do what you did`,
+    `Graduate in two, then join the revolution`,
+    `He looked at me like I was stupid`,
+    `I’m not stupid`,
+    `So how’d you do it?`,
+    `How’d you graduate so fast?`,
+    `You're an orphan`,
+    `Of course, I'm an orphan`,
+    `God, I wish there was a war!`,
+    `Then we could prove that we're worth more`,
+    `Than anyone bargained for`,
+    `Can I buy you a drink?`,
+    `That would be nice`,
+    `While we’re talking, let me offer you some free advice`,
+    `Talk less, smile more`,
+    `Don't let them know what you're against or what you're for`,
+    `Fools who run their mouths off wind up dead`,
 ];
-
-//set the default value on #paragraphs to 3
-document.getElementById('paragraphs').defaultValue = 3;
-
-var paragraphs = document.getElementById('paragraphs');
-
-paragraphs.addEventListener('keyup', updateParagraphNumber);
-
-function updateParagraphNumber() {
-    //get number from the input value
-    var numberOfParagraphs = parseInt(`${paragraphs.value}`);    
-    console.log(numberOfParagraphs);
-
-    //will need a for loop to generate parapgraphs
-}
-
-//appending the array to I am not throwing away my shot
-// function generateMyShotPrefix() {
-//     var myShotCheckbox = document.getElementById("my-shot");
-//     if (myShotCheckbox.checked == true) {
-//         // ipsum.unshift(`${myShotPrefix}`);
-//         console.log(`I am not throwing away my shot`);
-//     } else {
-//         console.log(`I am unchecked`);
-//     }
-// }
-
-function loremIpsum() {
-    document.getElementById('generated-text').innerHTML = `<h2>Hammy Love</h2>`;
-}
-
-// generateMyShotPrefix();
