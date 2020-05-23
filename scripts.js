@@ -1,11 +1,7 @@
-const myShotPrefix = `I am not throwing away my shot! `;
-
 const swearing = [`Bastard.`, `Son of a whore.`, `Sit down John you fat mother fucker.`, `Orphan.`];
 
 const ipsum = [
         // My Shot
-        `I am not throwing away my shot`,
-        `I am not throwing away my shot`,
         `Hey yo, I'm just like my country`,
         `I'm young, scrappy, and hungry`,
         `And I'm not throwing away my shot`,
@@ -78,6 +74,49 @@ const ipsum = [
         `Talk less, smile more`,
         `Don't let them know what you're against or what you're for`,
         `Fools who run their mouths off wind up dead`,
+
+        // Helpless
+        `Ohh, I do I do I do I Dooo! Hey!`,
+        `Boy you got me helpless`,
+        `Look into your eyes, and the sky’s the limit I’m helpless!`,
+        `Down for the count, and I’m drownin’ in ‘em`,
+        `I have never been the type to try and grab the spotlight`,
+        `We were at a revel with some rebels on a hot night`,
+        `Laughin’ at my sister as she’s dazzling the room`,
+        `Then you walked in and my heart went “Boom!”`,
+        `Tryin’ to catch your eye from the side of the ballroom`,
+        `Everybody’s dancin’ and the band’s top volume`,
+        `Grind to the rhythm as we wine and dine`,
+        `My sister made her way across the room to you`,
+        `And I got nervous thinking "What's she gonnda do?"`,
+        `She grabbed you by the arm, I’m thinkin’ “I’m through"`,
+        `Then you look back at me and suddenly I’m Helpless!`,
+        `One week later I'm writing a leterr nightly`,
+        `Now my life gets better, every letter that you write me`,
+        `Laughin’ at my sister, cuz she wants to form a harem`,
+        `I’m just sayin’, if you really loved me, you would share him`,
+        `Two weeks later in the living room stressin’`,
+        `My father’s stone-faced While you’re asking for his blessin’`,
+        `I’m dying inside, as you wine and dine`,
+        `And I’m tryin’ not to cry ‘cause there’s nothing that your mind can’t do`,
+        `My father makes his way across the room to you`,
+        `I panic for a second, thinking “we’re through”`,
+        `But then he shakes your hand and says “Be true`,
+        `And you turn back to me, smiling, and I’m Helpless! `,
+        // edit this for breaks
+        `Eliza, I don’t have a dollar to my name
+        An acre of land, a troop to command, a dollop of fame
+        All I have’s my honor, a tolerance for Paine
+        A couple of college credits and my top-notch brain
+        Insane, your family brings out a different side of me
+        Peggy confides in me, Angelica tried to take a bite of me
+        No stress, my love for you is never in doubt
+        We’ll get a little place in Harlem and we’ll figure it out
+        I’ve been livin’ without a family since I was a child
+        My father left, my mother died, I grew up buckwild
+        But I’ll never forget my mother’s face, that was real
+        And long as I’m alive, Eliza, swear to God
+        You’ll never feel so helpless`,
 ];
 
 // set the default value on #paragraphs to 3
@@ -85,20 +124,23 @@ document.getElementById('paragraphs').defaultValue = 3;
 
 const paragraphs = document.getElementById('paragraphs');
 
+const generatedTextZone = document.getElementById('generated-text');
+
+// spread operation with three dots, makes new array
+const prefixedIpsum = ['I am not throwing away my shot!', ...ipsum];
+
 function updateParagraphNumber() {
         // get number from the input value
         const numberOfParagraphs = parseInt(`${paragraphs.value}`);
-        // for of loop and append
 }
 
 paragraphs.addEventListener('keyup', updateParagraphNumber);
 
 function loremIpsum() {
         const myShotCheckbox = document.getElementById('my-shot');
-        if (myShotCheckbox.checked === true) {
-                // ipsum.unshift(`${myShotPrefix}`);
-                console.log(`My Shot is Checked`);
+        if (myShotCheckbox.checked) {
+                generatedTextZone.innerHTML = `${prefixedIpsum}`;
         } else {
-                console.log(`My Shot aint Checked`);
+                generatedTextZone.innerHTML = `${ipsum}`;
         }
 }
