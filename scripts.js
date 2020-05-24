@@ -103,38 +103,34 @@ const ipsum = [
         `I panic for a second, thinking “we’re through”`,
         `But then he shakes your hand and says “Be true`,
         `And you turn back to me, smiling, and I’m Helpless! `,
-        // edit this for breaks
-        `Eliza, I don’t have a dollar to my name
-        An acre of land, a troop to command, a dollop of fame
-        All I have’s my honor, a tolerance for Paine
-        A couple of college credits and my top-notch brain
-        Insane, your family brings out a different side of me
-        Peggy confides in me, Angelica tried to take a bite of me
-        No stress, my love for you is never in doubt
-        We’ll get a little place in Harlem and we’ll figure it out
-        I’ve been livin’ without a family since I was a child
-        My father left, my mother died, I grew up buckwild
-        But I’ll never forget my mother’s face, that was real
-        And long as I’m alive, Eliza, swear to God
-        You’ll never feel so helpless`,
+        `Eliza, I don’t have a dollar to my name`,
+        `An acre of land, a troop to command, a dollop of fame`,
+        `All I have’s my honor, a tolerance for Paine,`,
+        `A couple of college credits and my top-notch brain`,
+        `Insane, your family brings out a different side of me`,
+        `Peggy confides in me, Angelica tried to take a bite of me`,
+        `No stress, my love for you is never in doubt`,
+        `We’ll get a little place in Harlem and we’ll figure it out`,
+        `I’ve been livin’ without a family since I was a child`,
+        `My father left, my mother died, I grew up buckwild`,
+        `But I’ll never forget my mother’s face, that was real`,
+        `And long as I’m alive, Eliza, swear to God`,
+        `You’ll never feel so helpless`,
 ];
-
-// set the default value on #paragraphs to 3
-document.getElementById('paragraphs').defaultValue = 3;
 
 const paragraphs = document.getElementById('paragraphs');
 
-const generatedTextZone = document.getElementById('generated-text');
+paragraphs.defaultValue = 3;
 
-// spread operation with three dots, makes new array
-const prefixedIpsum = ['I am not throwing away my shot!', ...ipsum];
-
-function updateParagraphNumber() {
-        // get number from the input value
+function updateIpsumParagraph() {
         const numberOfParagraphs = parseInt(`${paragraphs.value}`);
 }
 
-paragraphs.addEventListener('keyup', updateParagraphNumber);
+paragraphs.addEventListener('keyup', updateIpsumParagraph);
+
+const prefixedIpsum = ['I am not throwing away my shot!', ...ipsum];
+
+const generatedTextZone = document.getElementById('generated-text');
 
 function loremIpsum() {
         const myShotCheckbox = document.getElementById('my-shot');
