@@ -2,3 +2,7 @@
     width: 20px;
     text-align: center;
 }
+
+fieldset {
+    width: 20%;
+}
