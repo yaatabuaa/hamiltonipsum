@@ -117,6 +117,7 @@ const ipsum = [
         `You’ll never feel so helpless`,
 ];
 
+/*
 const paragraphs = document.getElementById('paragraphs');
 
 paragraphs.defaultValue = 3;
@@ -126,6 +127,7 @@ function updateIpsumParagraph() {
 }
 
 paragraphs.addEventListener('keyup', updateIpsumParagraph);
+*/
 
 const prefixedIpsum = ['I am not throwing away my shot!', ...ipsum];
 
@@ -133,9 +135,15 @@ const generatedTextZone = document.getElementById('generated-text');
 
 function loremIpsum() {
         const myShotCheckbox = document.getElementById('my-shot');
+        const swearingCheckbox = document.getElementById('swearing');
+
         if (myShotCheckbox.checked) {
                 generatedTextZone.innerHTML = `${prefixedIpsum}`;
         } else {
                 generatedTextZone.innerHTML = `${ipsum}`;
+        }
+
+        if (swearingCheckbox.checked) {
+                console.log('potty mouth');
         }
 }
