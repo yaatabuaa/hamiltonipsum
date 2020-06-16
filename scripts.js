@@ -115,6 +115,21 @@ const ipsum = [
         `But I’ll never forget my mother’s face, that was real`,
         `And long as I’m alive, Eliza, swear to God`,
         `You’ll never feel so helpless`,
+
+        // Right Hand Man
+        `British Admiral Howe’s got troops on the water`,
+        `Thirty-two thousand troops in New York harbor`,
+        `Thirty-two thousand troops in New York harbor`,
+        `When they surround our troops!`,
+        `They surround our troops!`,
+        `When they surround our troops!`,
+        `As a kid in the Caribbean I wished for a war`,
+        `I knew that I was poor I knew it was the only way to rise up`,
+        `If they tell my story I am either gonna die on the battlefield in glory or rise up`,
+        `We will fight for this land`,
+        `But there’s only one man`,
+        `Who can give us a command so we can rise up`,
+        `Here comes the General!`,
 ];
 
 /*
@@ -147,3 +162,7 @@ function loremIpsum() {
                 console.log('potty mouth');
         }
 }
+
+const button = document.querySelector('.text-generator');
+
+button.addEventListener('click', loremIpsum);
